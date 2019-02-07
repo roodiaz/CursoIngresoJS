@@ -4,6 +4,11 @@
 */
 function mostrar()
 {
+	var nombre;
+	nombre="rocio"
+
+	prompt();
+	
 
 }
 
