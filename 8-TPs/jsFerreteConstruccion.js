@@ -46,7 +46,26 @@ function Circulo ()
 
 	
 }
+
 function Materiales () 
 {
-	
+
+    var long
+    var anch
+    var superficie
+
+
+    long=document.getElementById("Largo").value;
+    anch=document.getElementById("Ancho").value;
+
+    long=parseInt(long);
+    anch=parseInt(anch);
+
+    superficie=(long*anch);
+    cemento=(superficie)/2;
+    cal=(superficie)/3;
+
+    alert("Se necesitan " + cemento + " bolsas de cemento y " + cal + " de cal para una superficie de "+ superficie+  "metros cuadrados");
+
+    
 }
