@@ -13,8 +13,8 @@ function mostrar()
     porcentaje=parseInt(porcentaje);
 
 
-    descuento=parseInt(precio * porcentaje)/100;
-    final=parseInt(precio - descuento);
+    descuento=(precio * porcentaje)/100;
+    final=(precio - descuento);
     
     document.getElementById("elPrecioFinal").value=final;
 }
