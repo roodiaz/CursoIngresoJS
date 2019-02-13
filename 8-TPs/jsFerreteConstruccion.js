@@ -9,16 +9,41 @@ function Rectangulo ()
 
     var long
     var anch
-    var rad
+    var perimetro
+
 
     long=document.getElementById("Largo").value;
     anch=document.getElementById("Ancho").value;
-    rad=document.getElementById("Radio").value;
 
-    
+    long=parseInt(long);
+    anch=parseInt(anch);
+
+    perimetro=(long+anch)*2;
+    alambres=(perimetro)/3;
+
+    alert("Se deben comprar 3 alambres de "+alambres+ " cm para "+ perimetro+ " cm de terreno" );
+
+
 }
+
 function Circulo () 
 {
+
+    var rad
+    var diamentro
+    var terreno
+    
+    rad=document.getElementById("Radio").value;
+
+    rad=parseInt(rad);
+    diametro=parseInt(rad)*2;
+    terreno=parseInt(diametro)*3.14;
+    alambres=parseInt(terreno)/3;
+
+    alert("Se deben comprar 3 alambres de "+alambres+ " cm para "+ terreno+ " cm de terreno" );
+    al
+
+
 	
 }
 function Materiales () 
