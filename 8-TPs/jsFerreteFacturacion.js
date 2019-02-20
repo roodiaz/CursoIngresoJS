@@ -57,8 +57,7 @@ function PrecioFinal ()
     precio3=parseInt(precio3);
     
     importe=(precio1 + precio2 + precio3);
-    iva=(importe)*0.21;
-    final=(importe+iva);
+    iva=(importe)+(importe)*0.21;
     
-    alert("El precio mas Iva es "+ final);
+    alert("El precio mas Iva es "+ iva);
 }
