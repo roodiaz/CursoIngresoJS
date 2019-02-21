@@ -12,40 +12,81 @@ function CalcularPrecio ()
 {
     var cantidad = document.getElementById("Cantidad").value;
     var marca = document.getElementById("Marca").value;
-    var preciofinal = document.getElementById("precioDescuento").value;
-
+    var total = document.getElementById("precioDescuento").value;
+    
+    total=parseInt(total);
     cantidad = parseInt(cantidad);
     precio = cantidad*35;
 
     var desc50 = precio-precio*0.50;
-    var desc40 = precio-precio*0.30;
-    var desc20 = precio-precio*0.20
+    var desc40 = precio-precio*0.40;
+    var desc30 = precio-precio*0.30;
+    var desc20 = precio-precio*0.20;
     var desc25 = precio-precio*0.25;
     var desc15 = precio-precio*0.15;
     var desc10 = precio-precio*0.10;
     var desc5 = precio-precio*0.05;
 
-    switch(cantidad)
-    {
-        case 5:
-        if(marca=="ArgentinaLuz"){
-            total=cantidad*precio*0.6;
-        }
-        else{
-            total=cantidad*precio*0.7;
-        }
-    break;
-     
-        case 4:
-        if(marca=="ArgentinaLuz"||"FelipeLamaparas"){
-            total=cantidad*precio*0.6;
-        }
-        else{
-            total=cantidad*precio*0.7;
-        }
-    break;
 
-        case 3:
+    if(cantidad>=6)
+    {
+        document.getElementById("precioDescuento").value=desc50;
+    }
+
+
+    if(cantidad == 5)
+    {
+        if(marca == "ArgentinaLuz")
+        {
+            document.getElementById("precioDescuento").value=desc40;
+        }
+        else
+        {
+            document.getElementById("precioDescuento").value=desc30;
+        }   
+    }
+
+    if(cantidad == 4)
+    {
+        if(marca == "ArgentinaLuz" || marca=="FelipeLamparas")
+        {
+            document.getElementById("precioDescuento").value=desc25;
+        }
+        else
+        {
+            document.getElementById("precioDescuento").value=desc20;
+        } 
+    }
+
+    if(cantidad == 3)
+    {
+        if(marca == "ArgentinaLuz")
+        {
+            document.getElementById("precioDescuento").value=desc15;
+        }
+        if(marca == "FelipeLamparas")
+        {
+            document.getElementById("precioDescuento").value=desc10;
+        }
+        else
+        {
+            document.getElementById("precioDescuento").value=desc5;          
+        }
+    }
+
+    if(total > 120)
+    {
+        total1=total*0.10;
+        preciofinal=total+total1;
+        alert("Usted pago "+total+", siendo "+total1+" el impuesto que se pago");
+        document.getElementById("precioDescuento").value=preciofinal;
+
+        
+    }
+
+    
+
+    
 
 
     
