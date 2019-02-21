@@ -35,7 +35,6 @@ function CalcularPrecio ()
             total=cantidad*precio*0.7;
         }
     break;
-    }
      
         case 4:
         if(marca=="ArgentinaLuz"||"FelipeLamaparas"){
@@ -46,7 +45,8 @@ function CalcularPrecio ()
         }
     break;
 
-    case 3:
+        case 3:
+
 
     
 
