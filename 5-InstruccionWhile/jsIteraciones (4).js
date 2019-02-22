@@ -5,12 +5,16 @@ function mostrar()
 	
 	
 
-	while(num)
-	{
-		if(num>=0 && num<=9){
+	while (num > 0  && num < 9 ) {
 
-			document.getElementById("Numero").value=num;
-		}
-	break;
+		num =  prompt ( " Numero equivocado " );
+
+		consola . log (cont ++ );
+
+	}
+
+	if (num >  10 ) {
+
+		alerta ( " No es un numero del 0 al 9 " );
 	}
 }//FIN DE LA FUNCIÓN
