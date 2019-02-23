@@ -1,7 +1,6 @@
 function mostrar()
 {
   var acumulador=0;
-  var promedio;
   var num
   var cont=0;
 
@@ -11,9 +10,9 @@ function mostrar()
     num=prompt("ingrese numero");
     num=parseInt(num);
 
-    suma=cont+num;
-    acumulador=suma;
-  }
+    acumulador+=num;
+
+  } while(isNaN(num));
 
 
 document.getElementById("suma").value=acumulador;
