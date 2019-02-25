@@ -8,13 +8,22 @@ function mostrar()
 
   while(respuesta)
   {
-    contador++
     num = prompt("Ingrese numero");
     num = parseInt(num);
+
+    if(isNaN(num) == false){
+      
+      contador++;
+      respuesta = confirm("Agregar mas numeros?");
+      acumulador+=num;
+
+    } else {
+
+      alert("Error, no es un numero. Intente de nuevo");
+
+    }
     
-    respuesta = confirm("Agregar mas numeros?");
-    acumulador+=num;
-  }
+  } 
 
   document.getElementById ("suma").value = acumulador;
   document.getElementById ("promedio").value = acumulador / contador;
