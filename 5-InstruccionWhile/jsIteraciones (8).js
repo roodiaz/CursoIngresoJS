@@ -1,27 +1,32 @@
 function mostrar()
 {
-  var num
+
 	var contador=0;
 	var positivo=0;
 	var negativo=1;
-  var max;
-  var min;
-  var bandera= true;
-  var respuesta= confirm("Agregar numeros?");
+  var respuesta=confirm("Agregar numeros?");
+  var numero;
 
-  do
+  while(respuesta) 
   {
-    contador++
-    num = prompt("Ingrese numero");
-    num = parseInt(num);
-    
-    respuesta = confirm("Agregar mas numeros?");
+    numero = prompt ( " ingrese un numero " );
+    numero = parseInt (numero);
 
-  } while(respuesta);
+    if (numero >=  0 ) 
+    {
+      positivo+= numero;
+      contador++;
+    } else  {
+      negativo*= numero;
+    }
 
+    respuesta = confirm ("Desea seguir agregando numeros?");
+
+  }
+
+  document.getElementById ("suma").value = positivo;
+  document.getElementById ("producto").value= negativo;
   
-  
-  document.getElementById("suma").value= suma;
-  document.getElementById("producto").value= producto;
+
 
 }//FIN DE LA FUNCIÓN
