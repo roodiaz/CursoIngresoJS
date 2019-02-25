@@ -1,25 +1,22 @@
 function mostrar()
 {
 
-  var acumulador=0;
-  var contador=0;
-  var respuesta = confirm("Desea agregar numeros?")
-  var numeros;
+  var acumulador = 0;
+  var contador = 0;
+  var respuesta = confirm("Agregar numero?");
+  var num;
 
   while(respuesta)
   {
     contador++
-    numeros = prompt("Ingrese numero");
-    numeros = parseInt(numeros);
+    num = prompt("Ingrese numero");
+    num = parseInt(num);
     
-    respuesta=confirm("Desea seguir agreando numeros?");
-    
-    acumulador+=numeros;
-    
-    
-  } while(isNaN(numeros));
+    respuesta = confirm("Agregar mas numeros?");
+    acumulador+=num;
+  }
 
-  documento . getElementById ("suma"). valor = acumulador;
-  documento . getElementById ("promedio"). valor  = acumulador / contador;
+  document.getElementById ("suma").value = acumulador;
+  document.getElementById ("promedio").value = acumulador / contador;
 
 }//FIN DE LA FUNCIÓN
