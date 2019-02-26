@@ -1,27 +1,58 @@
 function mostrar()
 {
 
-  var num;
-  var sumneg=0;
-  var sumapos=0;
-  var contneg=0;
-  var contpos=0;
-  var contentero=0;
-  var contpares=0;
-  var respuesta=confirm();
-
-
-      do{
-          num=prompt("ingrese numero");
-          num=parseInt;
-      } while (isNaN(num));
-
-      if(num<0){
-                sumacont+=num;
-                contneg++;
-      } else {
-
-      }
+    var numero;
+	var sumaPositivos =0 ;
+	var sumaNegativos = 0;
+	var promedioPositivos = 0
+	var promedioNegativos = 0;
+	var diferenciaPositivosNegativos = 0;
+	var contadorPositivos = 0;
+	var contadorNegativos = 0;
+	var contadorCeros = 0;
+	var contadorPares = 0;
+	var respuesta = confirm();
+	
+    
+	while (respuesta)
+	{
+		numero = prompt("Ingrese un numero:");
+        numero = parseInt(numero);
+        
+		if (numero < 0)
+		{
+			sumaNegativos+= numero;
+			contadorNegativos++;
+		}
+		else if (numero > 0)
+		{
+			sumaPositivos+= numero;
+			contadorPositivos++;
+		}
+		else 
+		{
+			contadorCeros++;
+		}
+		if (numero % 2 == 0 && numero != 0)
+		{
+			contadorPares++;
+		}
+		respuesta = confirm("Agregar mas numeros?");
+    }
+    
+	promedioNegativos = sumaNegativos/contadorNegativos;
+    promedioPositivos = sumaPositivos/contadorPositivos;
+    diferenciaPositivosNegativos = sumaPositivos - sumaNegativos;
+    
+	document.write("La suma de negativos es: "+sumaNegativos+"<br>");
+	document.write("La suma de positivos es: "+sumaPositivos+"<br>");
+	document.write("La cantidad de positivos es: "+contadorPositivos+"<br>");
+	document.write("La cantidad de negativos es: "+contadorNegativos+"<br>");
+	document.write("La cantidad de ceros es: "+contadorCeros+"<br>");
+	document.write("La cantidad de pares es: "+contadorPares+"<br>");
+	document.write("El promedio de negativos es :"+promedioNegativos+"<br>");
+	document.write("El promedio de los positivos es: "+promedioPositivos+"<br>");
+	document.write("La diferencia entre positivos y negativos es: "+diferenciaPositivosNegativos+"<br>");
 
 
 
