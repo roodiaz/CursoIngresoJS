@@ -6,7 +6,7 @@ function mostrar()
 	var sumaNegativos = 0;
 	var promedioPositivos = 0
 	var promedioNegativos = 0;
-	var diferenciaPositivosNegativos = 0;
+	var diferenciaPyN = 0;
 	var contadorPositivos = 0;
 	var contadorNegativos = 0;
 	var contadorCeros = 0;
@@ -42,7 +42,7 @@ function mostrar()
     
 	promedioNegativos = sumaNegativos/contadorNegativos;
     promedioPositivos = sumaPositivos/contadorPositivos;
-    diferenciaPositivosNegativos = sumaPositivos - sumaNegativos;
+    diferenciaPyN = sumaPositivos - sumaNegativos;
     
 	document.write("La suma de negativos es: "+sumaNegativos+"<br>");
 	document.write("La suma de positivos es: "+sumaPositivos+"<br>");
@@ -52,7 +52,7 @@ function mostrar()
 	document.write("La cantidad de pares es: "+contadorPares+"<br>");
 	document.write("El promedio de negativos es :"+promedioNegativos+"<br>");
 	document.write("El promedio de los positivos es: "+promedioPositivos+"<br>");
-	document.write("La diferencia entre positivos y negativos es: "+diferenciaPositivosNegativos+"<br>");
+	document.write("La diferencia entre positivos y negativos es: "+diferenciaPyN+"<br>");
 
 
 
