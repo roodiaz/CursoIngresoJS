@@ -2,58 +2,73 @@ function mostrar()
 {
     var nota;
     var sexo;
+    var cont = 0;
     var sumaNotas = 0;
-    var i=0;
-    var notaMasBaja = 10;
-    var sexoDeNotaMasBaja;
-    var varonesConNotaMayorASeis = 0;
+    var bandera = true;
+    var notaBaja;
+    var sexoNotaBaja;
+    var mConNotaAlta = 0;
 
-    while(i < 5)
+    while(cont < 5)
     {
-    nota = prompt("Ingrese nota obtenida entre 0 y 10");
-    nota = parseInt(nota);
-        
-        //valido que no sea una letra
-        while(isNaN(nota)){
-            nota = prompt("Ingrese una nota numerica");
+        cont++;
+        //pido ingreso de numero
+        nota = prompt("Ingresar nota del 1 al 10");
+        nota = parseInt(nota);
+
+        //valido que sea un numero
+        while(isNaN(nota))
+        {
+            alert("error, no es un numero valido");
+            nota = prompt("Ingresar nota del 1 al 10");
             nota = parseInt(nota);
         }
 
-        //valido que sea un numero entre 0 y 10
-        while(nota < 0 || nota > 10){
-            nota = prompt("Ingrese una nota entre 0 y 10");
-            nota = parseInt(nota);  
+        //valido que sea numero del 1 al 10
+        while(nota > 10 || nota < 1)
+        {
+            alert("error, no es un numero del 1 al 10");
+            nota = prompt("Ingresar nota del 1 al 10");
+            nota = parseInt(nota);
         }
 
-    sexo = prompt("Ingrese el sexo del alumno(F o M)");
+        //pedir sexo de alumno
+        sexo = prompt("Ingresar sexo: f o m");
 
-        //valido que sea F o M
-        while(sexo !="f" && sexo !="m"){
-            sexo = prompt("Ingrese F o M");
+        //valido sexo
+        while(sexo != "f" && sexo != "m")
+        {
+            alert("error, no es un sexo valido");
+            sexo = prompt("Ingresar sexo: f o m");
+        }
+
+        //promedio notas totales
+        sumaNotas = sumaNotas + nota;
+        promedioTotal = sumaNotas / cont;
+
+        //defino nota y sexo mas bajo
+        if(bandera)
+        {
+            notaBaja = nota;
+            bandera = false;
+        }
+        if(notaBaja > nota)
+        {
+            notaBaja = nota;
+            sexoNotaBaja = sexo;
         }
         
-        //sumo notas para obtener promedio
-        sumaNotas = sumaNotas + nota;
-
-        //guardo nota mas baja
-        if(notaMasBaja > nota){
-            notaMasBaja = nota;
-            sexoDeNotaMasBaja = sexo;
+        if(sexo == "m" && nota >= 6)
+        {
+            mConNotaAlta++;
         }
 
-        //calculo cant de M con nota mayor o igual a 6
-        if(sexo == "m" && nota >= 6){
-            varonesConNotaMayorASeis++;
-        }
-
-    i++;
     }
 
-    //alert("El promedio de las notas es: " + sumaNotas / i);
-    //alert("La nota mas baja es: " + notaMasBaja + " y su sexo es: " + sexoDeNotaMasBaja);
-    //alert("Cantidad de varones con nota mayor o igual a 6: " + varonesConNotaMayorASeis);
-
-    alert("El promedio de las notas es: " + sumaNotas / i +
-    "\nLa nota mas baja es: " + notaMasBaja + " y su sexo es: " + sexoDeNotaMasBaja +
-    "\nCantidad de varones con nota mayor o igual a 6: " + varonesConNotaMayorASeis);
+    document.write("El promedio total de las notas es de: "+promedioTotal+"<br>");
+    document.write("La nota mas baja es "+notaBaja+" y el sexo es "+sexoNotaBaja+ "<br>");
+    document.write("La cantidad de varones con nota mayor o igual a 6 son: "+mConNotaAlta+"<br>");
 }
+
+
+

@@ -1,31 +1,30 @@
 function mostrar()
 {
 
-  var acumulador = 0;
-  var contador = 0;
-  var respuesta = confirm("Agregar numero?");
-  var num;
+	var cont=0;
+	var suma=0;
+	var respuesta = confirm("Ingresar numero?")
+	
 
-  while(respuesta)
-  {
-    num = prompt("Ingrese numero");
-    num = parseInt(num);
+	while(respuesta)
+	{
+		cont++;
+		num = prompt("Ingrese numero");
+		num = parseInt (num)
 
-    if(isNaN(num) == false){
-      
-      contador++;
-      respuesta = confirm("Agregar mas numeros?");
-      acumulador+=num;
+		while(isNaN(num))
+		{
+			alert("Eso no es un numero");
+			num = prompt("Ingrese numero")
+			num = parseInt(num);
+		}
+		
+		respuesta = confirm("Ingresar numero?");
+	}
+		suma = suma + num;
 
-    } else {
 
-      alert("Error, no es un numero. Intente de nuevo");
-
-    }
-    
-  } 
-
-  document.getElementById ("suma").value = acumulador;
-  document.getElementById ("promedio").value = acumulador / contador;
+	document.getElementById('suma').value=suma;
+	document.getElementById('promedio').value=suma/cont;
 
 }//FIN DE LA FUNCIÓN

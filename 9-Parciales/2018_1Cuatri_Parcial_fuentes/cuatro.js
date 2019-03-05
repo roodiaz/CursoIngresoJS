@@ -1,38 +1,29 @@
 function mostrar()
 {
+    var num1 = prompt("Ingrese primer numero");
+    var num2 = prompt("Ingrese segundo numero");
 
-    var num1 = prompt("Ingrese un numero");
-    var num2 = prompt("Ingrese otro numero");
-    num1=parseInt(num1);
-    num2=parseInt(num2);
-    var div
-    var suma
+    num1 = parseInt(num1);
+    num2 = parseInt(num2);
 
     if(num1 == num2)
     {
-        alert(num1+" y "+num2+" son iguales");
+        alert("La concatenacion de estos numeros es: "+num1+num2);
     }
-
     if(num1 > num2)
     {
-        div= num1/num2;
-        alert("la division es igual a "+div);
+        resta = num1 - num2
+        alert("La resta es: "+resta);
     }
-
-
     if(num1 < num2)
     {
-        suma=num1+num2;
-        alert("la suma es igual a "+suma);
-
-        if(suma<50)
-        {
-            alert("la suma es "+suma+" y es menor a 50");
-        }
+        suma = num1 + num2;
+        alert("La suma es: " + suma);
     }
-
+    if(suma > 10)
+    {
+        alert("La suma es "+suma+" y supero el 10");
+    }
     
-
-
 
 }

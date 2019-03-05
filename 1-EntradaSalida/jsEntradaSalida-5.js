@@ -2,16 +2,9 @@
 ej.: "Usted se llama José y tiene 66 años" 	*/
 function mostrar()
 {	
-    var dato1
-     dato1=document.getElementById("elNombre").value;
+    var nombre = document.getElementById("elNombre").value;
+    var edad = document.getElementById("laEdad").value;
 
-    var dato2
-    dato2=document.getElementById("laEdad").value;
-
-    alert("Usted se llama "+dato1 +" y tiene " + dato2);
-
-
-
-	
+    alert("Usted se llama " + nombre + " y tiene " + edad + " años.");
 }
 

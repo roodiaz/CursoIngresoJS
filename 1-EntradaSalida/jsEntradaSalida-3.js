@@ -2,9 +2,9 @@
 y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
-    var num;
+    var nombre = document.getElementById("elNombre").value;
     
-    num=document.getElementById("elNombre").value;
-
-    alert(num);
+    alert("El nombre ingresado es " + nombre);
 }
+
+

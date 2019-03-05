@@ -1,13 +1,15 @@
 function mostrar()
 {
-  cont = 0;
-	var num = prompt("ingrese un número entre 0 y 9.");
 
-  while(num < 0 || num > 9 )
-  {
-    cont++;
-    num = prompt ("Numero equivocado, ingresar nuevamente");
+	var numero = prompt("ingrese un número entre 0 y 10.");
+	var cont = 0;
+
+	while(numero > 10 || numero < 0)
+	{
+		cont++;
+		numero = prompt("No es un numero valido, intente de nuevo");
 	}
 
-   document.getElementById("Numero").value=num;
+	document.getElementById("Numero").value = numero;
+
 }//FIN DE LA FUNCIÓN
